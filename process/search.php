@@ -19,7 +19,6 @@ foreach($locations as $loc){
         <span class='loc-title'>$loc->title</span>
     </div></a>";
 }
-
 # better solution
 # send header content type json
 # echo json_encode($locations)
