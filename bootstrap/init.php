@@ -12,10 +12,7 @@ try {
 } catch (PDOException $e) {
     diePage('Connection failed: ' . $e->getMessage());
 }
-
 // echo "Connection to Database is OK!";
-
-
 include BASE_PATH . "libs/lib-users.php";
 include BASE_PATH . "libs/lib-locations.php";
 

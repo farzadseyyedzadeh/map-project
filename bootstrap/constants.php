@@ -3,7 +3,6 @@ define('SITE_TITLE','7Map Project');
 define('BASE_URL','http://localhost/7Learn.php/7Map/');
 define('BASE_PATH','C:/xampp/htdocs/7Learn.php/7Map/');
 
-
 const locationTypes = [
     0 => "عمومی",
     1 => "شرکت",
