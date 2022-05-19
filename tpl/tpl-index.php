@@ -10,24 +10,15 @@
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />    
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
-    
+
 </head>
 <body>
     <div class="main">
-        <div class="head">
+    <div class="head">
         <div class="search-box">
-        <input type="text" id="search" placeholder="دنبال کجا می گردی؟">
+        <input type="text" id="search" placeholder="دنبال کجا می گردی؟" autocomplete="off">
         <div class="clear"></div>
-        <div class="search-results">
-        <div class="result-item" data-lat='111' data-lng='222'>
-            <span class="loc-type">رستوران</span>
-            <span class="loc-title">رستوران و قوه خانه سنتی سون لرن</span>
-        </div>
-        <div class="result-item" data-lat='111' data-lng='222'>
-            <span class="loc-type">دانشگاه</span>
-            <span class="loc-title">دانشگاه شریف</span>
-        </div>
-        </div>
+        <div class="search-results" style="display:none"></div>
         </div>
         </div>
         <div class="mapContainer">
@@ -81,6 +72,29 @@
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/scripts.js"></script>
+    <script>
+        <?php if($location): ?>
+            L.marker([<?=$location->lat?>, <?=$location->lng?>]).addTo(map).bindPopup("<?=$location->title?>").openPopup();
+        <?php endif; ?>
+        $(document).ready(function() {
+            $('img.currentLoc').click(function() {
+                locate();
+            });
+            $('#search').keyup(function() {
+                const input = $(this);
+                const searchResult = $('.search-results');
+                searchResult.html('در حال جستجو ...');
+                $.ajax({
+                    url: '<?= BASE_URL . 'process/search.php' ?>',
+                    method: 'POST',
+                    data: {keyword:input.val()},
+                    success: function(response) {
+                        searchResult.slideDown().html(response);
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>

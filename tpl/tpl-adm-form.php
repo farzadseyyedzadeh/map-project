@@ -48,7 +48,7 @@
     <div class="main-panel">
     <h1>ورود به پنل مدیریت <span style="color:#007bec">سون مپ</span></h1>
         <div class="box">
-            <form action="" method="post">
+            <form action="adm.php" method="post">
                 <input type="text" name="username" placeholder="Username" autocomplete="off"><br>
                 <input type="password" name="password" placeholder="Password" autocomplete="off"><br>
                 <input type="submit" value="Login" style="text-align: center">

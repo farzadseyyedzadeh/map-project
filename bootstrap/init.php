@@ -1,6 +1,9 @@
 <?php
+session_start();
+
 include "constants.php";
 include BASE_PATH . "bootstrap/config.php";
+include BASE_PATH . "vendor/autoload.php";
 include BASE_PATH . "libs/helpers.php";
 
 try {
@@ -13,5 +16,6 @@ try {
 // echo "Connection to Database is OK!";
 
 
+include BASE_PATH . "libs/lib-users.php";
 include BASE_PATH . "libs/lib-locations.php";
 
