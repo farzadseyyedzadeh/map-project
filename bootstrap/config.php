@@ -3,7 +3,7 @@ $database_config = (object)[
     'host' => 'localhost',
     'user' => 'root',
     'pass' => '',
-    'db' => '7map'
+    'db' => 'map'
 ];
 $admins = [
     'admin' => '$2y$10$sAubqKZ2YHSNaB1C3uTAQe14oGaJ.hsrzRjlc0aMQtYmWu5SfAD6m',
