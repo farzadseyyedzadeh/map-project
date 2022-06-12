@@ -6,7 +6,7 @@
     <title>7Map</title>
     <link href="favicon.png" rel="shortcut icon" type="image/png">
 
-    <link rel="stylesheet" href="assets/css/styles.css<?= "?v=" . rand(99,9999999) ?>" />
+    <link rel="stylesheet" href="/assets/css/styles.css "?v=" . rand(99,9999999) ?>" />
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />    
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
