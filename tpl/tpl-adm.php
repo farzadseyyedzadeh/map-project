@@ -137,9 +137,6 @@ use Hekmatinasser\Verta\Verta;
             </div>
         </div>
     </div>
-
-
-
     <script src="assets/js/jquery.min.js"></script>
     <script>
     $(document).ready(function() {
